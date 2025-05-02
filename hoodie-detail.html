@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skibidi Signature Hoodie - Details</title>
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Poppins Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <style>
+    body {
+      background-color: #1e1e21; /* Raisin Black */
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+
+    .product-details {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .add-to-cart {
+      background-color: #4d4f57;
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .add-to-cart:hover {
+      background-color: #303236;
+    }
+
+    .back-to-shop {
+      margin-top: 1rem;
+      display: inline-block;
+      text-decoration: none;
+      color: #4d4f57;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body class="bg-black text-white">
+
+  <!-- Header section -->
+  <nav class="flex justify-between items-center mb-10 p-4 bg-gray-800 rounded-xl">
+    <div class="flex items-center space-x-4">
+      <!-- Wrapping logo and name in a link to the home page -->
+      <a href="skibiditoilet.html" class="flex items-center space-x-4">
+        <img src="https://i.ppy.sh/ef23fcf275376fc3a495b30dcd1182432782be5b/68747470733a2f2f737465616d75736572696d616765732d612e616b616d616968642e6e65742f7567632f313835393432313232393337303138323130302f303744303239453134414346383343443135454539303234354635454345394439453637414131342f3f696d773d36333726696d683d33353826696d613d66697426696d706f6c6963793d4c6574746572626f7826696d636f6c6f723d253233303030303030266c6574746572626f783d74727565" 
+             alt="Skibidi Toilet Logo" class="h-10 w-auto">
+        <h1 class="text-2xl font-bold">Skibidi Toilet</h1>
+      </a>
+    </div>
+    <ul class="flex space-x-6 text-lg">
+      <!-- Adding the Home link to navigate to skibiditoilet.html -->
+      <li><a href="skibiditoilet.html" class="text-white hover:text-gray-400">Home</a></li>
+      <li><a href="shop.html" class="text-white hover:text-gray-400">Shop</a></li>
+      <li><a href="about.html" class="text-white hover:text-gray-400">About</a></li>
+      <li><a href="contact.html" class="text-white hover:text-gray-400">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="text-center mb-10">
+    <h2 class="text-4xl font-bold" id="header-title">Skibidi Signature Hoodie</h2>
+  </header>
+
+  <section id="3d-model" class="mb-10">
+    <div class="sketchfab-embed-wrapper" id="model-wrapper">
+      <iframe title="Skibidi Signature Hoodie"
+        allowfullscreen
+        allow="autoplay; fullscreen; xr-spatial-tracking"
+        src="https://sketchfab.com/models/3f3b3d0ebbd94cc2a4978001962a9006/embed?autostart=1&autoplay=1&preload=1&ui_infos=0&ui_controls=1&ui_hint=0&ui_stop=0">
+      </iframe>
+      <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+        <a href="https://sketchfab.com/3d-models/my-sweet-piano-hoodie-with-bones-3f3b3d0ebbd94cc2a4978001962a9006?utm_medium=embed&utm_campaign=share-popup&utm_content=3f3b3d0ebbd94cc2a4978001962a9006" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">
+          My Sweet Piano Hoodie (With Bones)
+        </a> by <a href="https://sketchfab.com/zHairezt?utm_medium=embed&utm_campaign=share-popup&utm_content=3f3b3d0ebbd94cc2a4978001962a9006" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">zHairezt</a> on 
+        <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=3f3b3d0ebbd94cc2a4978001962a9006" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="text-center" id="details-section">
+    <h3 class="text-2xl font-bold">Skibidi Signature Hoodie</h3>
+    <p class="mt-4 mb-4">The Skibidi Signature Hoodie is a stylish, high-quality hoodie that combines comfort and edgy streetwear vibes. Perfect for your day-to-day adventures.</p>
+    <p class="text-xl font-semibold mb-6">$49.99</p>
+    <button class="add-to-cart">Add to Cart</button>
+  </section>
+
+  <a href="skibiditoilet.html" class="back-to-shop">← Back to Shop</a>
+
+  <script>
+    // GSAP animations
+    gsap.from("#header-title", { duration: 1, y: -50, opacity: 0, ease: "power2.out" });
+    gsap.from("#model-wrapper", { duration: 1, x: -100, opacity: 0, ease: "power2.out", delay: 0.5 });
+    gsap.from("#details-section", { duration: 1, y: 50, opacity: 0, ease: "power2.out", delay: 1 });
+  </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Outfit Details</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+      font-family: 'Arial', sans-serif;
+    }
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body class="p-6">
+  <!-- Header section -->
+  <nav class="flex justify-between items-center mb-10 p-4 bg-gray-800 rounded-xl">
+    <div class="flex items-center space-x-4">
+      <!-- Wrapping logo and name in a link to the home page -->
+      <a href="skibiditoilet.html" class="flex items-center space-x-4">
+        <img src="https://i.ppy.sh/ef23fcf275376fc3a495b30dcd1182432782be5b/68747470733a2f2f737465616d75736572696d616765732d612e616b616d616968642e6e65742f7567632f313835393432313232393337303138323130302f303744303239453134414346383343443135454539303234354635454345394439453637414131342f3f696d773d36333726696d683d33353826696d613d66697426696d706f6c6963793d4c6574746572626f7826696d636f6c6f723d253233303030303030266c6574746572626f783d74727565" 
+             alt="Skibidi Toilet Logo" class="h-10 w-auto">
+        <h1 class="text-2xl font-bold">Skibidi Toilet</h1>
+      </a>
+    </div>
+    <ul class="flex space-x-6 text-lg">
+      <!-- Adding the Home link to navigate to skibiditoilet.html -->
+      <li><a href="skibiditoilet.html" class="text-white hover:text-gray-400">Home</a></li>
+      <li class="hover:text-yellow-400 cursor-pointer">Shop</li>
+      <li class="hover:text-yellow-400 cursor-pointer">About</li>
+      <li class="hover:text-yellow-400 cursor-pointer">Contact</li>
+    </ul>
+  </nav>
+
+  <header class="text-center mb-10">
+    <h2 class="text-4xl font-bold" id="header-title">Outfit Details</h2>
+  </header>
+
+  <section id="3d-model" class="mb-10">
+    <div class="sketchfab-embed-wrapper" id="model-wrapper">
+      <iframe title="Classic Simple Female Tshirt"
+        frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
+        allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking
+        execution-while-out-of-viewport execution-while-not-rendered web-share
+        src="https://sketchfab.com/models/0716c81dd0e14fe984a295a3095eb8d4/embed?ui_theme=dark&autostart=1&autospin=1&preload=1">
+      </iframe>
+    </div>
+  </section>
+
+  <section class="text-center" id="details-section">
+    <h3 class="text-2xl font-bold">Classic Simple Female T-shirt</h3>
+    <p class="mt-4 mb-4">This is the perfect minimalist T-shirt, combining simplicity and style. Ideal for everyday wear or casual outings.</p>
+    <p class="text-xl font-semibold mb-6">$24.99</p>
+    <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded transition duration-300">Add to Cart</button>
+  </section>
+
+  <script>
+    gsap.from("#header-title", { duration: 1, y: -50, opacity: 0, ease: "power2.out" });
+    gsap.from("#model-wrapper", { duration: 1, x: -100, opacity: 0, ease: "power2.out", delay: 0.5 });
+    gsap.from("#details-section", { duration: 1, y: 50, opacity: 0, ease: "power2.out", delay: 1 });
+  </script>
+</body>
+</html>
+

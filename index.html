@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skibidi Toilet</title>
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Poppins Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <style>
+    body {
+      background-color: #1e1e21;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+    }
+    .hover-effect {
+      transition: transform 0.3s ease;
+    }
+    .hover-effect:hover {
+      transform: scale(1.05);
+    }
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+    .rotate-toilet {
+      animation: rotate 10s linear infinite;
+    }
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .icon-dark path {
+      fill: #ffffff;
+      transition: fill 0.3s ease;
+    }
+    .icon-dark:hover path {
+      fill: #4d4f57;
+    }
+    .product-card {
+      background-color: #4d4f57;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .product-card:hover {
+      transform: scale(1.05);
+    }
+    .slideshow-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-top: 100px;
+}
+
+.slideshow-wrapper {
+  display: flex;
+  transition: transform 1.5s ease-in-out;
+}
+
+.slide {
+  width: 100vw;
+  height: 600px; /* Larger height */
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.description {
+  text-align: center;
+  font-size: 16px;
+  max-width: 800px;
+  margin: 30px auto 0 auto; /* More spacing above */
+  padding: 20px;
+}
+
+
+.description {
+  text-align: center;
+  font-size: 16px;
+  max-width: 800px;
+  margin: 40px auto 60px auto; /* space above and below */
+  padding: 20px;
+  line-height: 1.6;
+}
+  </style>
+</head>
+<body class="p-6 bg-black text-white">
+
+  <!-- Navigation -->
+  <nav class="flex justify-between items-center mb-10 p-4 bg-gray-900 shadow-xl rounded-xl opacity-0">
+    <div class="flex items-center space-x-4">
+      <img src="https://i.ppy.sh/ef23fcf275376fc3a495b30dcd1182432782be5b/68747470733a2f2f737465616d75736572696d616765732d612e616b616d616968642e6e65742f7567632f313835393432313232393337303138323130302f303744303239453134414346383343443135454539303234354635454345394439453637414131342f3f696d773d36333726696d683d33353826696d613d66697426696d706f6c6963793d4c6574746572626f7826696d636f6c6f723d253233303030303030266c6574746572626f783d74727565"
+        alt="Skibidi Toilet Logo"
+        class="h-20 w-20 rounded-full object-cover">
+      <h1 class="text-3xl font-bold text-white">Skibidi Toilet</h1>
+    </div>
+    <ul class="flex space-x-6 text-lg">
+      <li class="hover:text-gray-400 cursor-pointer">Home</li>
+      <li class="hover:text-gray-400 cursor-pointer">Shop</li>
+      <li class="hover:text-gray-400 cursor-pointer">About</li>
+      <li class="hover:text-gray-400 cursor-pointer"><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  
+  <!-- Header -->
+  <header class="text-center mb-10 opacity-0">
+    <h2 class="text-4xl font-bold text-white">Flush your style. Literally.</h2>
+  </header>
+
+  <!-- 3D Model -->
+  <section id="3d-model" class="mb-10">
+    <div class="sketchfab-embed-wrapper">
+      <iframe title="Men's Padded Coat With Tshirt"
+        allowfullscreen
+        allow="autoplay; fullscreen; xr-spatial-tracking"
+        xr-spatial-tracking
+        execution-while-out-of-viewport
+        execution-while-not-rendered
+        web-share
+        src="https://sketchfab.com/models/bb375860f46444d8bd77059e3116c1be/embed?autostart=1&autoplay=1&preload=1&ui_infos=0&ui_controls=1&ui_hint=0&ui_stop=0">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <div class="product-card hover-effect text-white">
+      <a href="outfit-detail.html">
+        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto icon-dark" viewBox="0 0 24 24" fill="none" width="100" height="100" stroke="currentColor">
+          <path d="M4 6V18C4 18.5523 4.44772 19 5 19H19C19.5523 19 20 18.5523 20 18V6H4Z" />
+          <path d="M10 6V4C10 3.44772 10.4477 3 11 3H13C13.5523 3 14 3.44772 14 4V6H10Z" />
+          <path d="M6 9H18V16H6V9Z" />
+        </svg>
+        <h2 class="text-xl mt-4">Toilet Warrior Tee</h2>
+      </a>
+    </div>
+
+    <!-- Skibidi Hoodie -->
+    <div class="product-card hover-effect text-white">
+      <a href="hoodie-detail.html">
+        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto icon-dark" viewBox="0 0 24 24" fill="none" width="100" height="100" stroke="currentColor">
+          <path d="M6 4C6 3.44772 6.44772 3 7 3H17C17.5523 3 18 3.44772 18 4V5H6V4Z" />
+          <path d="M5 6H19V12H5V6Z" />
+          <path d="M7 12V17H17V12H7Z" />
+        </svg>
+        <h2 class="text-xl mt-4">Skibidi Signature Hoodie</h2>
+      </a>
+    </div>
+
+    <!-- Flush Mode -->
+    <div class="product-card hover-effect text-white">
+      <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto icon-dark" viewBox="0 0 24 24" fill="none" width="100" height="100" stroke="currentColor">
+        <path d="M4 6H20C20.5523 6 21 6.44772 21 7V17C21 17.5523 20.5523 18 20 18H4C3.44772 18 3 17.5523 3 17V7C3 6.44772 3.44772 6 4 6Z" />
+        <path d="M7 6V4C7 3.44772 7.44772 3 8 3H16C16.5523 3 17 3.44772 17 4V6H7Z" />
+      </svg>
+      <h2 class="text-xl mt-4">Flush Mode Activated</h2>
+    </div>
+
+    <!-- Minimalist Look 1 -->
+    <div class="product-card hover-effect text-white">
+      <a href="minimalist1.html">
+        <img src="https://brainrotme.com/cdn/shop/files/unisex-classic-tee-black-front-672e49761edb3.jpg?v=1731086727&width=1946" alt="Minimalist Look 1" class="w-full h-64 object-cover rounded" />
+        <h2 class="text-xl mt-4"></h2>
+      </a>
+    </div>
+
+    <!-- Minimalist Look 2 -->
+    <div class="product-card hover-effect text-white">
+      <a href="minimalist2.html">
+        <img src="https://iflexbtw.in/cdn/shop/files/debtauratshirtblackmockup.png?v=1728627723&width=1445" alt="Minimalist Look 2" class="w-full h-64 object-cover rounded" />
+        <h2 class="text-xl mt-4"></h2>
+      </a>
+    </div>
+
+    <!-- Fashion Model 1 -->
+    <div class="product-card hover-effect text-white">
+      <a href="model1.html">
+        <img src="https://cdn.arstechnica.net/wp-content/uploads/2023/04/listing.jpg" alt="Fashion Model 1" class="w-full h-64 object-cover rounded" />
+        <h2 class="text-xl mt-4"></h2>
+      </a>
+    </div>
+  </section>
+
+  <!-- Slideshow Section -->
+<!-- Slideshow Section -->
+<section class="slideshow-container">
+  <div class="slideshow-wrapper">
+    <img src="https://iflexbtw.in/cdn/shop/files/brainrottshirtblackmockup.png?v=1728588259" class="slide" alt="Slide 1">
+    <img src="https://cdn.shopify.com/s/files/1/0696/2426/7060/files/Funny-Teenager-Brain-Rot-T-Shirt-Gen-Z-Gen-Alpha-Tees-trending-Mogging-Slang-New-5.jpg?v=1731559677" class="slide" alt="Slide 2">
+    <img src="https://m.media-amazon.com/images/I/B1pppR4gVKL._CLa%7C2140%2C2000%7CA1UUKyDgjtL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UY1000_.png" class="slide" alt="Slide 3">
+    <img src="https://image.theageofmiraclesbook.com/wp-content/uploads/2025/04/5/spijuniro-golubiro-italian-brainrot-meme-men-tshirt.jpg" class="slide" alt="Slide 4">
+    <img src="https://m.media-amazon.com/images/I/B1pppR4gVKL._CLa%7C2140%2C2000%7C61-bE93WZQL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UY1000_.png" class="slide" alt="Slide 5">
+    <img src="https://i5.walmartimages.com/seo/Funny-Erm-What-The-Sigma-Ironic-Meme-Brainrot-Quote-T-Shirt-Size-S-5XL_f8e4e736-cca6-40b4-85a4-970f153accfa.c58b2440bd3e4a821009243e4f479c11.jpeg" class="slide" alt="Slide 6">
+    <img src="https://m.media-amazon.com/images/I/A16YlCTQRlL._CLa%7C2140%2C2000%7C91G9nFxW9iL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UY1000_.png" class="slide" alt="Slide 7">
+  </div>
+  <div class="description">
+    <p>Welcome to the world of Skibidi Toilet — where absurdity meets streetwear, and fashion flushes the ordinary. Our latest collection is a bold expression of individuality, humor, and rebellion, crafted for those who refuse to blend in. Inspired by viral culture and meme-driven chaos, each piece is a visual slap of irony and aesthetic. From “Toilet Warrior” tees to minimalist black fits and meme-infused graphics, this drop is for the unapologetically online generation.
+
+      We don’t do basic — we do brainrot couture. Whether you’re rocking oversized hoodies that scream nihilistic humor or tees that nod to niche internet lore, you’re making a statement. Every item is made from soft, high-quality cotton blends to ensure all-day comfort without sacrificing style. The silhouettes are relaxed, the prints are loud, and the vibe is 100% unfiltered.
+      
+      These designs aren’t just clothes — they’re conversation starters. Wear them to class, to the function, or straight into your next TikTok. Each shirt reflects the chaotic beauty of meme culture and speaks to the mindset of a generation that finds truth in the ridiculous. Skibidi Toilet isn’t just a brand — it’s an attitude: ironic, bold, and self-aware.
+      
+      So whether you're in your "sigma grindset" era or just embracing your inner toilet gremlin, this collection has something for you. It's not about dressing up — it's about standing out and laughing while you do it. This is your sign to stop taking fashion so seriously. Let your shirt do the talking.</p>
+  </div>
+</section>
+
+
+<script>
+  // Animate navigation and products
+  gsap.to("nav", { duration: 1, opacity: 1, y: 0, ease: "power2.out" });
+  gsap.to("header", { duration: 1.2, opacity: 1, y: 0, ease: "power2.out", delay: 0.3 });
+  gsap.from(".product-card", {
+    duration: 1,
+    y: 50,
+    opacity: 0,
+    stagger: 0.2,
+    ease: "power3.out",
+    delay: 0.5
+  });
+
+  // Hover scale for product cards
+  document.querySelectorAll('.product-card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      gsap.to(card, { scale: 1.05, duration: 0.3, ease: "power2.out" });
+    });
+    card.addEventListener('mouseleave', () => {
+      gsap.to(card, { scale: 1, duration: 0.3, ease: "power2.out" });
+    });
+  });
+
+  // Auto-sliding GSAP carousel
+  const wrapper = document.querySelector(".slideshow-wrapper");
+  const slides = document.querySelectorAll(".slide");
+  const totalSlides = slides.length;
+  let currentIndex = 0;
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    gsap.to(wrapper, {
+      x: -currentIndex * window.innerWidth,
+      duration: 1.2,
+      ease: "power2.inOut"
+    });
+  }
+
+  // Set each slide width to full viewport width
+  slides.forEach(slide => {
+    slide.style.width = `${window.innerWidth}px`;
+  });
+
+  setInterval(nextSlide, 3000); // Change slide every 3 seconds
+</script>
+
+</body>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-10 mt-10 rounded-t-xl">
+  <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+    <div>
+      <h4 class="text-lg font-semibold mb-3">Skibidi Toilet</h4>
+      <p>Bold fashion. Viral memes. Flush-worthy fits for Gen Z and beyond.</p>
+    </div>
+    <div>
+      <h4 class="text-lg font-semibold mb-3">Explore</h4>
+      <ul>
+        <li class="mb-1 hover:text-gray-400"><a href="#">Home</a></li>
+        <li class="mb-1 hover:text-gray-400"><a href="#">Shop</a></li>
+        <li class="mb-1 hover:text-gray-400"><a href="#">About</a></li>
+        <li class="mb-1 hover:text-gray-400"><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-lg font-semibold mb-3">Support</h4>
+      <ul>
+        <li class="mb-1 hover:text-gray-400"><a href="#">FAQ</a></li>
+        <li class="mb-1 hover:text-gray-400"><a href="#">Shipping & Returns</a></li>
+        <li class="mb-1 hover:text-gray-400"><a href="#">Privacy Policy</a></li>
+        <li class="mb-1 hover:text-gray-400"><a href="#">Terms of Service</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-lg font-semibold mb-3">Connect</h4>
+      <p class="mb-2">Follow us on social media:</p>
+      <div class="flex space-x-4">
+        <a href="#" class="hover:text-gray-400">Instagram</a>
+        <a href="#" class="hover:text-gray-400">TikTok</a>
+      </div>
+    </div>
+  </div>
+  <div class="text-center text-gray-500 text-xs mt-6">&copy; 2025 Skibidi Toilet. All rights reserved.</div>
+</footer>
+</html>
